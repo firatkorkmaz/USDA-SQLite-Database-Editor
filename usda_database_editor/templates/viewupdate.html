@@ -1,0 +1,291 @@
+<!DOCTYPE html>  
+<html>
+
+<head>  
+    <title>Food Update</title>
+	
+</head> 
+ 
+<body>  
+  
+<a href="/">Home Page</a>
+
+||
+
+{% if rows[0]["food_group_id"]==100 %}
+	<a href="/categories/dairy_and_egg_products">Previous Page</a>
+	<br><br>
+	<h3>Food Update: Dairy and Egg Products</h3>
+{% elif rows[0]["food_group_id"]==200 %}
+	<a href="/categories/spices_and_herbs">Previous Page</a>
+	<br><br>
+	<h3>Food Update: Spices and Herbs</h3>
+{% elif rows[0]["food_group_id"]==300 %}
+	<a href="/categories/baby_foods">Previous Page</a>
+	<br><br>
+	<h3>Food Update: Baby Foods</h3>
+{% elif rows[0]["food_group_id"]==400 %}
+	<a href="/categories/fats_and_oils">Previous Page</a>
+	<br><br>
+	<h3>Food Update: Fats and Oils</h3>
+{% elif rows[0]["food_group_id"]==500 %}
+	<a href="/categories/poultry_products">Previous Page</a>
+	<br><br>
+	<h3>Food Update: Poultry Products</h3>
+{% elif rows[0]["food_group_id"]==600 %}
+	<a href="/categories/soups_sauces_and_gravies">Previous Page</a>
+	<br><br>
+	<h3>Food Update: Soups, Sauces and Gravies</h3>
+{% elif rows[0]["food_group_id"]==700 %}
+	<a href="/categories/sausages_and_luncheon_meats">Previous Page</a>
+	<br><br>
+	<h3>Food Update: Sausages and Luncheon Meats</h3>
+{% elif rows[0]["food_group_id"]==800 %}
+	<a href="/categories/breakfast_cereals">Previous Page</a>
+	<br><br>
+	<h3>Food Update: Breakfast Cereals</h3>
+{% elif rows[0]["food_group_id"]==900 %}
+	<a href="/categories/fruits_and_fruit_juices">Previous Page</a>
+	<br><br>
+	<h3>Food Update: Fruits and Fruit Juices</h3>
+{% elif rows[0]["food_group_id"]==1000 %}
+	<a href="/categories/pork_products">Previous Page</a>
+	<br><br>
+	<h3>Food Update: Pork Products</h3>
+{% elif rows[0]["food_group_id"]==1100 %}
+	<a href="/categories/vegetables_and_vegetable_products">Previous Page</a>
+	<br><br>
+	<h3>Food Update: Vegetables and Vegetable Products</h3>
+{% elif rows[0]["food_group_id"]==1200 %}
+	<a href="/categories/nut_and_seed_products">Previous Page</a>
+	<br><br>
+	<h3>Food Update: Nut and Seed Products</h3>
+{% elif rows[0]["food_group_id"]==1300 %}
+	<a href="/categories/beef_products">Previous Page</a>
+	<br><br>
+	<h3>Food Update: Beef Products</h3>
+{% elif rows[0]["food_group_id"]==1400 %}
+	<a href="/categories/beverages">Previous Page</a>
+	<br><br>
+	<h3>Food Update: Beverages</h3>
+{% elif rows[0]["food_group_id"]==1500 %}
+	<a href="/categories/finfish_and_shellfish_products">Previous Page</a>
+	<br><br>
+	<h3>Food Update: Finfish and Shellfish Products</h3>
+{% elif rows[0]["food_group_id"]==1600 %}
+	<a href="/categories/legumes_and_legume_products">Previous Page</a>
+	<br><br>
+	<h3>Food Update: Legumes and Legume Products</h3>
+{% elif rows[0]["food_group_id"]==1700 %}
+	<a href="/categories/lamb_veal_and_game_products">Previous Page</a>
+	<br><br>
+	<h3>Food Update: Lamb, Veal and Game Products</h3>
+{% elif rows[0]["food_group_id"]==1800 %}
+	<a href="/categories/baked_products">Previous Page</a>
+	<br><br>
+	<h3>Food Update: Baked Products</h3>
+{% elif rows[0]["food_group_id"]==1900 %}
+	<a href="/categories/sweets">Previous Page</a>
+	<br><br>
+	<h3>Food Update: Sweets</h3>
+{% elif rows[0]["food_group_id"]==2000 %}
+	<a href="/categories/cereal_grains_and_pasta">Previous Page</a>
+	<br><br>
+	<h3>Food Update: Cereal Grains and Pasta</h3>
+{% elif rows[0]["food_group_id"]==2100 %}
+	<a href="/categories/fast_foods">Previous Page</a>
+	<br><br>
+	<h3>Food Update: Fast Foods</h3>
+{% elif rows[0]["food_group_id"]==2200 %}
+	<a href="/categories/meals_entrees_and_side_dishes">Previous Page</a>
+	<br><br>
+	<h3>Food Update: Meals, Entrees and Side Dishes</h3>
+{% elif rows[0]["food_group_id"]==2500 %}
+	<a href="/categories/snacks">Previous Page</a>
+	<br><br>
+	<h3>Food Update: Snacks</h3>
+{% elif rows[0]["food_group_id"]==3500 %}
+	<a href="/categories/american_indian_alaska_native_foods">Previous Page</a>
+	<br><br>
+	<h3>Food Update: American Indian/Alaska Native Foods</h3>
+{% elif rows[0]["food_group_id"]==3600 %}
+	<a href="/categories/restaurant_foods">Previous Page</a>
+	<br><br>
+	<h3>Food Update: Restaurant Foods</h3>
+{% endif%}
+
+
+<table border=3>
+
+    <thead>  
+        <td>ID</td>
+		<td>Food Group ID</td>
+		<td>Long Description</td>
+		<td>Short Description</td>
+		<td>Manufacturer</td>
+		<td>Scientific Name</td>
+    </thead>  
+            
+	<tr>  
+		<td>{{rows[0]["id"]}}</td> 
+		<td>{{rows[0]["food_group_id"]}}</td>
+		<td>{{rows[0]["long_desc"]}}</td>
+		<td>{{rows[0]["short_desc"]}}</td>
+		<td>{{rows[0]["manufac_name"]}}</td>
+		<td>{{rows[0]["sci_name"]}}</td>
+	</tr>
+
+	<tr>
+		<form action="/viewupdate" method="post">
+		<td><input type="hidden" value={{rows[0]["id"]}} name="id"/></td>  
+		<td><input type="text" name="food_group_id"/></td>  
+		<td><input type="text" name="long_desc"/></td>  
+		<td><input type="text" name="short_desc"/></td>  
+		<td><input type="text" name="manufac_name"/></td>  
+		<td><input type="text" name="sci_name"/></td>
+		<td><input type="submit" value="Update"></td>
+		</form>
+	</tr>
+	
+</table>
+
+<br>
+
+<h3>Weight</h3>
+<table border=3>
+
+    <thead>
+		<td>Sequence Number</td>
+		<td>Amount</td>
+		<td>Description</td>
+		<td>GM Weight</td>
+		<td>Num Data PTS</td>
+		<td>STD Dev</td>
+    </thead>  
+      
+    {% for row in rwg %}  
+
+        <tr>
+			<td>{{row["sequence_num"]}}</td>
+			<td>{{row["amount"]}}</td>
+			<td>{{row["description"]}}</td>
+			<td>{{row["gm_weight"]}}</td>
+			<td>{{row["num_data_pts"]}}</td>
+			<td>{{row["std_dev"]}}</td>
+        </tr>
+				
+    {% endfor %}
+	
+</table>  
+
+<br>
+
+<h3>Nutrition</h3>
+
+<table border=3>
+
+    <thead>
+        <td>Nutrient ID</td>
+			<td>Amount</td>
+			<td>Units</td>
+			<td>Tag Name</td>
+			<td>Name</td>
+			<td>Num Decimal Places</td>
+			<td>SR Order</td>
+			<td>Num Data Points</td>
+			<td>STD Error</td>
+			<td>Source Code</td>
+			<td>Num Studients</td>
+			<td>MIN</td>
+			<td>MAX</td>
+			<td>Modific.Date</td>
+    </thead>  
+      
+    {% for row in rnt %}  
+	
+        <tr>  
+            <td>{{row["nutrient_id"]}}</td> 
+			<td>{{row["amount"]}}</td> 
+			<td>{{row["units"]}}</td>
+			<td>{{row["tagname"]}}</td>
+			<td>{{row["name"]}}</td>
+			<td>{{row["num_decimal_places"]}}</td>
+			<td>{{row["sr_order"]}}</td>
+			<td>{{row["num_data_points"]}}</td>
+			<td>{{row["std_error"]}}</td>
+			<td>{{row["source_code"]}}</td>
+			<td>{{row["num_studients"]}}</td>
+			<td>{{row["min"]}}</td>
+			<td>{{row["max"]}}</td>
+			<td>{{row["modification_date"]}}</td>
+        </tr>
+				
+    {% endfor %}  
+	
+</table>  
+
+<br>
+
+<a href="/">Home Page</a>
+
+||
+
+{% if rows[0]["food_group_id"]==100 %}
+	<a href="/categories/dairy_and_egg_products">Previous Page</a>
+{% elif rows[0]["food_group_id"]==200 %}
+	<a href="/categories/spices_and_herbs">Previous Page</a>
+{% elif rows[0]["food_group_id"]==300 %}
+	<a href="/categories/baby_foods">Previous Page</a>
+{% elif rows[0]["food_group_id"]==400 %}
+	<a href="/categories/fats_and_oils">Previous Page</a>
+{% elif rows[0]["food_group_id"]==500 %}
+	<a href="/categories/poultry_products">Previous Page</a>
+{% elif rows[0]["food_group_id"]==600 %}
+	<a href="/categories/soups_sauces_and_gravies">Previous Page</a>
+{% elif rows[0]["food_group_id"]==700 %}
+	<a href="/categories/sausages_and_luncheon_meats">Previous Page</a>
+{% elif rows[0]["food_group_id"]==800 %}
+	<a href="/categories/breakfast_cereals">Previous Page</a>
+{% elif rows[0]["food_group_id"]==900 %}
+	<a href="/categories/fruits_and_fruit_juices">Previous Page</a>
+{% elif rows[0]["food_group_id"]==1000 %}
+	<a href="/categories/pork_products">Previous Page</a>
+{% elif rows[0]["food_group_id"]==1100 %}
+	<a href="/categories/vegetables_and_vegetable_products">Previous Page</a>
+{% elif rows[0]["food_group_id"]==1200 %}
+	<a href="/categories/nut_and_seed_products">Previous Page</a>
+{% elif rows[0]["food_group_id"]==1300 %}
+	<a href="/categories/beef_products">Previous Page</a>
+{% elif rows[0]["food_group_id"]==1400 %}
+	<a href="/categories/beverages">Previous Page</a>
+{% elif rows[0]["food_group_id"]==1500 %}
+	<a href="/categories/finfish_and_shellfish_products">Previous Page</a>
+{% elif rows[0]["food_group_id"]==1600 %}
+	<a href="/categories/legumes_and_legume_products">Previous Page</a>
+{% elif rows[0]["food_group_id"]==1700 %}
+	<a href="/categories/lamb_veal_and_game_products">Previous Page</a>
+{% elif rows[0]["food_group_id"]==1800 %}
+	<a href="/categories/baked_products">Previous Page</a>
+{% elif rows[0]["food_group_id"]==1900 %}
+	<a href="/categories/sweets">Previous Page</a>
+{% elif rows[0]["food_group_id"]==2000 %}
+	<a href="/categories/cereal_grains_and_pasta">Previous Page</a>
+{% elif rows[0]["food_group_id"]==2100 %}
+	<a href="/categories/fast_foods">Previous Page</a>
+{% elif rows[0]["food_group_id"]==2200 %}
+	<a href="/categories/meals_entrees_and_side_dishes">Previous Page</a>
+{% elif rows[0]["food_group_id"]==2500 %}
+	<a href="/categories/snacks">Previous Page</a>
+{% elif rows[0]["food_group_id"]==3500 %}
+	<a href="/categories/american_indian_alaska_native_foods">Previous Page</a>
+{% elif rows[0]["food_group_id"]==3600 %}
+	<a href="/categories/restaurant_foods">Previous Page</a>
+{% else %}
+	<a href="/">Previous Page</a>
+{% endif%}
+
+<br><br>
+  
+</body>
+
+</html> 

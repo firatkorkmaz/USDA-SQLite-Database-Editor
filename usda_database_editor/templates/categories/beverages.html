@@ -1,0 +1,68 @@
+<!DOCTYPE html>  
+<html>  
+
+<head>  
+    <title>Beverages</title>  
+</head>  
+
+<body>  
+  
+<a href="/">Home Page</a>
+
+<br><br>
+
+<h3>Beverages</h3>  
+
+<table border=3>
+
+    <thead>
+		<td>ID</td>
+		<td>Group ID</td>
+		<td>Short Description</td>
+		<td>Nitrogen</td>
+		<td>Protein</td>
+		<td>Fat</td>
+		<td>Calorie</td>
+    </thead>  
+      
+    {% for row in rows %}  
+      
+        <tr>
+            <td>{{row["id"]}}</td>
+			<td>{{row["food_group_id"]}}</td>
+			<td>{{row["short_desc"]}}</td>
+			<td>{{row["nitrogen_factor"]}}</td>
+			<td>{{row["protein_factor"]}}</td>
+			<td>{{row["fat_factor"]}}</td>
+			<td>{{row["calorie_factor"]}}</td>
+			
+			<td><form action="/viewupdate" method="post">
+			<input type="hidden" value={{row["id"]}} name="id">
+			<input type="hidden" value="" name="food_group_id"/>
+			<input type="hidden" value="" name="long_desc"/>
+			<input type="hidden" value="" name="short_desc"/>
+			<input type="hidden" value="" name="manufac_name"/>
+			<input type="hidden" value="" name="sci_name"/>
+			<input type="submit" value="UPD"/></form></td>
+			
+			<td><form action="/delete" method="post">
+			<input type="hidden" value={{row["id"]}} name="id">
+			<input type="hidden" value={{row["food_group_id"]}} name="food_group_id"/>
+			<input type="submit" value="DEL"></form></td>
+        </tr>
+				
+    {% endfor %}
+	
+	</tr>
+	
+</table>  
+
+<br>  
+
+<a href="/">Home Page</a>
+
+<br><br>
+
+</body>
+  
+</html> 

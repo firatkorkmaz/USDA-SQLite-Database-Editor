@@ -1,0 +1,27 @@
+HTML File Names of Each Food Group:
+
+dairy_and_egg_products
+spices_and_herbs
+baby_foods
+fats_and_oils
+poultry_products
+soups_sauces_and_gravies
+sausages_and_luncheon_meats
+breakfast_cereals
+fruits_and_fruit_juices
+pork_products
+vegetables_and_vegetable_products
+nut_and_seed_products
+beef_products
+beverages
+finfish_and_shellfish_products
+legumes_and_legume_products
+lamb_veal_and_game_products
+baked_products
+sweets
+cereal_grains_and_pasta
+fast_foods
+meals_entrees_and_side_dishes
+snacks
+american_indian_alaska_native_foods
+restaurant_foods
